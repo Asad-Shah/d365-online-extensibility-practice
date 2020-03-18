@@ -3,6 +3,7 @@
         "@msdyn365-commerce/tslint-rules"
     ],
     "rules":{
-        "no-void-expression": false
+        "no-void-expression": false,
+        "ordered-imports": false
     }
 }

@@ -8,6 +8,7 @@ import * as Msdyn365 from '@msdyn365-commerce/core';
 
 export interface IBackgroundImageConfig extends Msdyn365.IModuleConfig {
     productIds?: string;
+    productId?: string;
     bgColor?: string;
     image?: IImageData;
 }

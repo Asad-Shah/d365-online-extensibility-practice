@@ -18,10 +18,9 @@ export interface IBackgroundImageViewProps extends IBackgroundImageProps<IBackgr
  * @extends {React.PureComponent<IBackgroundImageProps<IBackgroundImageData>>}
  */
 class BackgroundImage extends React.PureComponent<IBackgroundImageProps<IBackgroundImageData>> {
-    constructor(props : IBackgroundImageProps<IBackgroundImageData>){
+    constructor(props: IBackgroundImageProps<IBackgroundImageData>) {
         super(props);
     }
-    
     public render(): JSX.Element | null {
 
         return this.props.renderView(this.props);

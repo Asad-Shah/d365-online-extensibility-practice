@@ -3,21 +3,31 @@
     "friendlyName": "background-image",
     "name": "background-image",
     "description": "Please add meaningful description for authoring",
-    "categories": ["background-image"],
-    "tags": ["Additional tags go here"],
+    "categories": [
+        "background-image"
+    ],
+    "tags": [
+        "Additional tags go here"
+    ],
     "dataActions": {
         "products": {
             "path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-simple-products",
             "runOn": "server"
         }
-    },  
+    },
     "config": {
         "productIds": {
             "friendlyName": "Product Ids",
             "description": "Product Ids for data actions content",
             "type": "string"
         },
-        "bgColor":{
+        "productId": {
+            "friendlyName": "Id of Product to show",
+            "description": "The Id of the Product that will be rendered in this module",
+            "type": "string",
+            "default": "12345"
+        },
+        "bgColor": {
             "friendlyName": "Background Color",
             "description": "Background Color of content",
             "type": "string"
@@ -42,7 +52,7 @@
                         "center": "center"
                     }
                 },
-                "altText":{
+                "altText": {
                     "type": "string",
                     "friendlyName": "Alternative text",
                     "description": "Alternative text to show if image is not found/rendered"
