@@ -1,0 +1,38 @@
+{
+    "$type": "containerModule",
+    "friendlyName": "background-image-container",
+    "name": "background-image-container",
+    "description": "Please add meaningful description for authoring",
+    "categories": ["background-image-container"],
+    "tags": ["Additional tags go here"],
+    "dataActions": {        
+    },    
+    "config": {
+    },
+    "slots": {
+        "slot1": {
+            "friendlyName": "Image Content",
+            "description": "Background image content",
+            "allowedCategories": [
+                "background-image"
+            ],
+            "max": 1,
+            "min": 0
+        },
+        "slot2": {
+            "friendlyName": "Image Content",
+            "description": "Background image content ",
+            "allowedCategories": [
+                "background-image"
+            ],
+            "max": 1,
+            "min": 0
+        }
+    },
+    "resources": {
+        "resourceKey": {
+            "comment": "resource description",
+            "value": "resource value"
+        }
+    }
+}

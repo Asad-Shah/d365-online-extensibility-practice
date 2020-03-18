@@ -1,0 +1,60 @@
+{
+    "exception": null,
+    "pageRoot": {
+        "id": "core-root_0",
+        "typeName": "core-root",
+        "modules": {
+            "body": [
+                {
+                    "id": "default-page_0",
+                    "typeName": "default-page",
+                    "modules": {
+                        "primary": [
+                            {
+                                "id": "primaryArea__0",
+                                "typeName": "background-image-container",
+                                "modules": {
+                                    "slot1": [
+                                        {
+                                            "id": "bgImage__0",
+                                            "typeName": "background-image",
+                                            "config": {
+                                                "bgColor": "blue",
+                                                "image": {
+                                                  "url": "https://bit.ly/33cMGxr",
+                                                  "altText": "Retro Horn Rimmed Keyhole Nose Bridge Round Sunglasses",
+                                                  "alignment": "left"
+                                                }
+                                            }
+                                        }
+                                    ],
+                                    "slot2": [
+                                        {
+                                            "id": "bgImage__1",
+                                            "typeName": "background-image",
+                                            "config": {
+                                                "bgColor": "red",
+                                                "image": {
+                                                  "url": "https://bit.ly/33cMGxr",
+                                                  "altText": "Retro Horn Rimmed Keyhole Nose Bridge Round Sunglasses",
+                                                  "alignment": "right"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "renderingContext": {
+        "staticContext": {
+            "staticCdnUrl": "/_scnr/"
+        },
+        "locale": "en-us"
+    },
+    "statusCode": 200
+}
