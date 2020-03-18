@@ -37,15 +37,7 @@ const onButtonClick = (props: IBackgroundImageViewProps) => {
 
 export default (props: IBackgroundImageViewProps) => {
 
-    debugger;
-    // (async () => {
-    //     try {
-    //         let result: AsyncResult<ProductDimensionValue[]> = await _getData(props);
-    //         console.log(result);
-    //     } catch (error) {
-    //     }
-    // })();
-
+    console.log(props.data.products);
 
     const { image, bgColor } = props.config;
     if (image?.alignment === ImageAlignment.left) {

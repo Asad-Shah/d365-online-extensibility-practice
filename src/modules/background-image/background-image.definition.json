@@ -15,8 +15,7 @@
         "productIds": {
             "friendlyName": "Product Ids",
             "description": "Product Ids for data actions content",
-            "type": "string",
-            "default": "68719490634"
+            "type": "string"
         },
         "bgColor":{
             "friendlyName": "Background Color",
