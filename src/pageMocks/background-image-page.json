@@ -20,6 +20,7 @@
                                             "typeName": "background-image",
                                             "config": {
                                                 "bgColor": "blue",
+                                                "productIds": "68719498121",
                                                 "image": {
                                                   "url": "https://bit.ly/33cMGxr",
                                                   "altText": "Retro Horn Rimmed Keyhole Nose Bridge Round Sunglasses",
@@ -34,6 +35,7 @@
                                             "typeName": "background-image",
                                             "config": {
                                                 "bgColor": "red",
+                                                "productIds": "68719498121",
                                                 "image": {
                                                   "url": "https://bit.ly/33cMGxr",
                                                   "altText": "Retro Horn Rimmed Keyhole Nose Bridge Round Sunglasses",
