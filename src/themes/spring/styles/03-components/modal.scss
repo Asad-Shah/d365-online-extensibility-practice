@@ -1,0 +1,137 @@
+$msv-modal-width: 500px;
+$msv-modal-padding: 40px 60px;
+$msv-modal-margin: 20px;
+$msv-modal-button-padding: 5px;
+$msv-modal-horizontal-alignment-right: 1.75rem 1.5rem auto auto;
+$msv-modal-horizontal-alignment-center: 1.75rem auto;
+$msv-modal-horizontal-alignment-left: 1.75rem auto auto 1.5rem;
+$msv-modal-vertical-alignment-top: flex-start;
+$msv-modal-vertical-alignment-center: center;
+$msv-modal-vertical-alignment-bottom: flex-end;
+$msv-modal-z-index: 1050;
+
+$msv-size-m: 360px;
+
+.modal-open .msc-modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.msc-modal {
+    display: none;
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    outline: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: $msv-modal-z-index;
+
+    &.show .msc-modal__dialog {
+        transform: none;
+    }
+
+    &.fade .msc-modal__dialog {
+        transition: transform 0.3s ease-out;
+    }
+
+    &__dialog {
+        align-items: $msv-modal-vertical-alignment-top;
+        max-width: $msv-modal-width;
+        margin: $msv-modal-horizontal-alignment-center;
+        pointer-events: none;
+        position: relative;
+        width: auto;
+
+        @media (min-width: map-get($grid-breakpoints, "md")) {
+            max-width: 720px;
+        }
+    }
+
+    &__content {
+        background-clip: padding-box;
+        background-color: $msv-white;
+        border: 1px solid $msv-gray-500;
+        display: flex;
+        flex-direction: column;
+        outline: 0;
+        pointer-events: auto;
+        position: relative;
+        width: 100%;
+        padding: $msv-modal-padding;
+    }
+
+    &__header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        margin-bottom: $msv-modal-margin;
+
+        .msc-modal__title {
+            @include font-content-xl();
+            margin: 0;
+            text-transform: none;
+
+            @media screen and (max-width: $msv-size-m) {
+                font-size: 22px;
+            }
+        }
+
+        .msc-modal__close-button {
+            @include add-icon($msv-x-shape);
+            @include vfi();
+            background-color: transparent;
+            border: 0;
+            color: $msv-black;
+            font-size: 20px;
+            position: absolute;
+            right: 20px;
+            cursor: pointer;
+            text-shadow: 0 1px 0 $msv-white;
+        }
+    }
+
+    &__body {
+        margin-bottom: $msv-modal-margin;
+    }
+
+    &__footer {
+        display: flex;
+        justify-content: flex-start;
+
+        @media (max-width: map-get($grid-breakpoints, "md")) {
+            flex-wrap: wrap;
+            .btn-primary {
+                margin-bottom: 12px;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+    }
+
+    &__backdrop {
+        background-color: $msv-black;
+        height: 100vh;
+        left: 0;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        z-index: $msv-modal-z-index - 10;
+
+        &.show {
+            opacity: .5;
+        }
+    }
+}
+
+@media(prefers-reduced-motion: reduce) {
+    .msc-modal.fade .msc-modal__dialog {
+        transform: none;
+    }
+}

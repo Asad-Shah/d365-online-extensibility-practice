@@ -1,0 +1,6 @@
+{
+    "$type": "themeModule",
+    "friendlyName": "Spring",
+    "name": "spring",
+    "description": "This is spring-theme theme."
+}

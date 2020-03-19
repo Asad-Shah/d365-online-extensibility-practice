@@ -1,0 +1,29 @@
+.msc-promo-code {
+    &__applied-code-header {
+        @include font-content-l()
+    }
+
+    &__line{
+
+        &-container {
+            border-bottom: 1px solid black;
+            padding-bottom: 2px;
+        }
+    
+        &-value {
+            display: inline-block;
+        }
+
+        &__btn-remove {
+            @include button-link();
+            @include font-content-m($msv-font-weight-normal);
+        }
+
+    }
+    
+    &__input-box {
+        @include vfi();
+        border: 1px solid black;
+        outline: 1px dashed transparent;
+    }
+}

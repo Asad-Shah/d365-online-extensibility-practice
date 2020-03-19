@@ -1,0 +1,338 @@
+$reviews-list-border-color: $msv-text-color;
+$reviews-list-text-color: $msv-text-color;
+$reviews-list-link-color: $msv-link-color;
+$msv-review-repsponse-border-color: $msv-primary;
+$msv-reviews-list-date-color: $msv-gray-500;
+$msv-reviews-card-border-width: 1px;
+
+$msv-reviews-list-reviews-width: 100%;
+
+$msv-reviews-list-refiners-margin-bottom: 12px;
+$msv-reviews-list-refiners-margin-top-mobile-viewport: 5px;
+
+$msv-reviews-list-card-header-max-width: 200px;
+$msv-reviews-list-card-header-margin-right: 70px;
+
+$msv-rating-padding-top: 15px;
+$msv-msc-l-dropdown-label-margin-right: 5px;
+$msv-msc-l-dropdown-label-margin-left: 20px;
+$msv-msc-l-dropdown-label-margin-left-mobile-viewport: 2px;
+$msv-msc-l-dropdown-padding: 6px 5px;
+$msv-msc-l-dropdown-padding-mobile-viewport: 0px;
+
+$msv-reviewslist-help-icon-margin-right: 0px;
+$msv-reviewslist-like-icon-margin-right: 4px;
+$msv-reviews-list-controls-spacing: 16px;
+$msv-reviews-list-controls-padding-left: 5px;
+
+$msv-reviews-list-controls-spacing-m: 8px;
+$msv-reviews-list-card-padding: 20px 8px;
+
+$msv-reviews-response-margin: 12px 0;
+$msv-reviews-response-width: calc(100% - 70px);
+$msv-reviews-response-width-m: 500px;
+$msv-reviews-response-icon-width: 8px;
+$msv-reviews-response-icon-left: -20px;
+$msv-reviews-response-text-margin-top: 4px;
+
+$msv-reviews-list-pagination-icon-spacing: 3px;
+$msv-reviews-list-empty-message-padding: 24px;
+
+$msv-smaller-port-m: 320px;
+
+.ms-reviews-list {
+    @include font-content-m($msv-font-weight-light);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+
+    &__empty-message {
+        padding-bottom: $msv-reviews-list-empty-message-padding;
+    }
+
+    &__refiners {
+        margin-bottom: $msv-reviews-list-refiners-margin-bottom;
+
+        .msc-l-dropdown__label {
+            display: inline-block;
+            font-weight: $msv-font-weight-light;
+            margin-right: $msv-msc-l-dropdown-label-margin-right;
+            vertical-align: middle;
+            margin-left: $msv-msc-l-dropdown-label-margin-left;
+        }
+
+        .msc-l-dropdown{
+            padding: $msv-msc-l-dropdown-padding;
+            font-weight: $msv-font-weight-bold;
+            display: inline-block;
+            vertical-align: middle;
+            border-color: transparent;
+            background-color: transparent;
+        }
+
+        @media screen and (max-width: $msv-breakpoint-m) {
+            margin-top : $msv-reviews-list-refiners-margin-top-mobile-viewport; 
+            .msc-l-dropdown__label {
+                margin-left: $msv-msc-l-dropdown-label-margin-left-mobile-viewport;
+            }
+            .msc-l-dropdown{
+                padding: $msv-msc-l-dropdown-padding-mobile-viewport;
+            }
+        }
+    }
+
+    &__reviews {
+        flex-basis: $msv-reviews-list-reviews-width;
+        margin-bottom: 20px;
+    }
+
+    &__user-review {
+        background: $msv-white;
+
+        .ms-reviews-list__like,
+        .ms-reviews-list__dislike {
+            &.disabled {
+                &:before {
+                    font-weight: $msv-outline-icon-weight;
+                }
+            }
+        }
+    }
+
+    &__like,
+    &__dislike,
+    &__report,
+    &__edit {
+        @include button-link($reviews-list-link-color);
+        @include font-content-m($msv-font-weight-normal);
+        @include vfi();
+        vertical-align: middle;
+    }
+
+    &__submit,
+    &__success {
+        @include primary-button();
+        margin-right: 8px;
+    }
+
+    &__cancel {
+        @include secondary-button();
+    }
+
+    &__like {
+        @include add-icon($msv-Like, before, $msv-outline-icon-weight);
+        
+        &.disabled {
+            &:before {
+                font-weight: $msv-solid-icon-weight;
+            }
+        }
+
+        &:before {
+            margin-right: $msv-reviewslist-like-icon-margin-right;
+        }
+    }
+
+    &__dislike {
+        @include add-icon($msv-Dislike, before, $msv-outline-icon-weight);
+        padding-right: $msv-reviews-list-controls-spacing;
+        padding-left: $msv-reviews-list-controls-padding-left;
+        border-right: $msv-reviews-card-border-width solid $msv-review-repsponse-border-color;
+
+        &.disabled {
+            &:before {
+                font-weight: $msv-solid-icon-weight;
+            }
+        }
+
+        &:before {
+            margin-right: $msv-reviewslist-like-icon-margin-right;
+        }
+    }
+
+    &__date {
+        color: $msv-reviews-list-date-color;
+    }
+
+    &__card {
+        border-top: $msv-reviews-card-border-width solid $reviews-list-border-color;
+        padding: $msv-reviews-list-card-padding;
+
+        &-header {
+            margin-right: $msv-reviews-list-card-header-margin-right;
+            flex-shrink: 0;
+            max-width: $msv-reviews-list-card-header-max-width;
+        }
+
+        &-body {
+            flex-grow: 1;
+            margin-top: 20px;
+        }
+
+        &:last-child {
+            border-bottom: $msv-reviews-card-border-width solid $reviews-list-border-color;
+        }
+
+        @media (min-width: $msv-breakpoint-m) {
+            display: flex;
+
+            &-controls {
+                text-align: right;
+                font-weight: $msv-font-weight-normal;
+            }
+        }
+    }
+
+    &__name {
+        margin: 8px 0;
+        font-weight: $msv-font-weight-bold;
+    }
+
+    &__title {
+        @include font-content-xl(normal);
+        margin-bottom: 12px;
+    }
+
+    &__helpful {
+        display: block;
+        margin-bottom: 12px;;
+        margin-right: $msv-reviews-list-controls-spacing;
+    }
+
+    &__review {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__text {
+        flex-basis: 100%;
+        &:after {
+            content: '';
+        }
+    }
+
+    &__response {
+        margin: $msv-reviews-response-margin;
+        padding-left: 70px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: $msv-reviews-response-width;
+
+        &:before {
+            content: '';
+            width: $msv-reviews-response-icon-width;
+            height: 100%;
+            width: 8px;
+            position: absolute;
+            border-radius: 110px;
+            left: $msv-reviews-response-icon-left;
+            background-color: $msv-review-repsponse-border-color;
+        }
+
+        &-name {
+            font-weight: $msv-font-weight-bold;
+        }
+
+        &-text {
+            flex-basis: 100%;
+            margin-top: $msv-reviews-response-text-margin-top;
+        }
+
+        &-date {
+            color: $msv-reviews-list-date-color;
+        }
+
+        @media (min-width: $msv-breakpoint-m) {
+            width: $msv-reviews-response-width-m;
+        }
+    }
+
+    &__page-controls {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__next {
+        margin-left: auto;
+    }
+
+    &__next,
+    &__previous {
+        @include vfi();
+        @include font-content-l();
+        background-color: transparent;
+        border: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    &__previous:before {
+        @include msv-icon();
+        content: $msv-ChevronLeft;
+        margin-right: $msv-reviews-list-pagination-icon-spacing;
+    }
+
+    &__next:after {
+        @include msv-icon();
+        content: $msv-ChevronRight;
+        margin-left: $msv-reviews-list-pagination-icon-spacing;
+    }
+
+    &__report-error {
+        margin-bottom: 0;
+    }
+
+    &__report-message {
+        @include font-content-m($msv-font-weight-light);
+        margin-bottom: 20px;
+    }
+
+    &__reported {
+        color: $msv-green;
+        display: inline-block;
+        font-weight: $msv-font-weight-bold;
+    }
+
+    @media screen and (min-width: $msv-breakpoint-m) {
+        &__helpful {
+            display: inline-block;
+            vertical-align: middle;
+            margin-bottom: 0;
+            margin-right: $msv-reviewslist-help-icon-margin-right;
+        }
+
+        &__card {
+            &-body {
+                margin-top: 0;
+            }
+        }
+    }
+}
+
+.ms-report-review-modal {
+    fieldset {
+        border-color: transparent;
+        padding: 0;
+        margin: 0;
+    }
+
+    &-pair {
+        margin-bottom: 20px;
+    }
+
+    .msc-radio-label {
+        @include form-input-radio-label();
+    }
+
+    .msc-radio-input {
+        @include form-input-radio();
+    }
+}

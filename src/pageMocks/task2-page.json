@@ -8,6 +8,10 @@
                 {
                     "id": "default-page_0",
                     "typeName": "default-page",
+                    "config": {
+                        "skipToMainText": "Skip to main content",
+                        "pageTheme": "spring"
+                    },
                     "modules": {
                         "primary": [
                             {
@@ -53,6 +57,23 @@
         }
     },
     "renderingContext": {
+        "gridSettings": {
+            "xs": {
+                "w": 767
+            },
+            "sm": {
+                "w": 991
+            },
+            "md": {
+                "w": 1199
+            },
+            "lg": {
+                "w": 1599
+            },
+            "xl": {
+                "w": 1600
+            }
+        },
         "staticContext": {
             "staticCdnUrl": "/_scnr/"
         },

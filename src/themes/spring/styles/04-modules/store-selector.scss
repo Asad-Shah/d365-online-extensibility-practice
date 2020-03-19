@@ -1,0 +1,192 @@
+$msv-store-selector-phone-section-padding-top: 5px;
+$msv-store-selector-location-line-shop-address-padding-top: 2px;
+$msv-store-selector-location-line-shop-address-padding-right: 15px;
+$msv-store-selector-input-height: 48px;
+
+$msv-store-selector-button-border-radius: 0px;
+$msv-store-selector-input-border-radius: 2px 0 0 2px;
+$msv-store-selector-input-padding-left: 12px;
+$msv-store-selector-button-height: 48px;
+$msv-store-selector-button-width: 48px;
+
+$msv-store-selector-search-form-margin-bottom: 40px;
+
+$msv-store-selector-location-line-item-margin-top: 10px;
+
+$msv-breakpoint-modal-m: 450px;
+$msv-store-selector-msc-modal-content-padding: 40px;
+
+.ms-store-select {
+  color: $msv-text-color;
+
+  &__found-locations {
+    margin-bottom: 20px;
+  }
+
+  &__search {
+    display: flex;
+    &-form {
+      flex: auto;
+      display: flex;
+      margin-bottom: $msv-store-selector-search-form-margin-bottom;
+    }
+
+    &-input {
+      @include vfi();
+      flex: auto;
+      border: 1px solid $msv-gray-500;
+      border-right: 0;
+      border-radius: $msv-store-selector-input-border-radius;
+      padding-left: $msv-store-selector-input-padding-left;
+      height: $msv-store-selector-input-height;
+      border-color: transparent;
+      background: $msv-gray-100;
+      font-size: $msv-font-size-l;
+    }
+
+    &-button {
+        @include vfi();
+        align-items: center;
+        background-color: $msv-green;
+        border-radius: $msv-store-selector-button-border-radius;
+        color: $msv-white;
+        height: $msv-store-selector-button-height;
+        order: 2;
+        width: $msv-store-selector-button-width;
+        display: flex;
+        border: 1px solid transparent;
+
+        &:before {
+            @include msv-icon();
+            content: $msv-magnifying-glass;
+            width: $msv-store-selector-button-width;
+            text-align: center;
+        }
+    }
+  }
+
+  &__store-hours-details {
+    @include font-content-m($msv-font-weight-light);
+    display: flex;
+    flex-wrap: wrap;
+
+    .ms-store-select__store-hours-day {
+      flex: 0 0 40%;
+    }
+
+    .ms-store-select__store-hours-time {
+      flex: 0 0 60%;
+    }
+  }
+  &__locations {
+    border-bottom: 1px solid $msv-gray-300;
+  }
+
+  &__location {
+    padding: 20px 0;
+    border-top: 1px solid $msv-gray-300;
+
+    &-line-item-header,
+    &-line-header,
+    &-line-stock-status {
+      margin-bottom: 10px;
+    }
+
+    &-line-item-store-name{
+      color: $msv-green;
+      @include font-content-l($msv-font-weight-bold);
+    }
+
+    &-line-header {
+      @include font-content-m($msv-font-weight-bold);
+    }
+
+    &-line-store-distance {
+      color: $msv-gray-500;
+    }
+
+    &-line-item-content {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-line-shop-address {
+      &-section {
+        display: flex;
+      }
+      &-glyph-icon {
+        padding-top: $msv-store-selector-location-line-shop-address-padding-top;
+        padding-right: $msv-store-selector-location-line-shop-address-padding-right;
+        @include add-icon($msv-Shop-Address);
+      }
+      &-text {
+        @include font-content-m();
+        white-space: pre-wrap;
+      }
+    }
+
+    &-line-shop-phone {
+      &-section {
+        display: flex;
+        padding-top: $msv-store-selector-phone-section-padding-top;
+      }
+      &-icon {
+        padding-top: $msv-store-selector-location-line-shop-address-padding-top;
+        padding-right: $msv-store-selector-location-line-shop-address-padding-right;
+        @include add-icon($msv-Phone);
+      }
+    }
+
+    &-line-select-store {
+      @include primary-button();
+      @include vfi();
+      @include font-content-l();
+    }
+  }
+
+  &__terms-link {
+    @include vfi();
+  }
+}
+
+@media screen and (min-width: $msv-breakpoint-m) {
+  .ms-store-select__location {
+    &-line-item-content {
+      flex-direction: row;
+    }
+    &-line-item-contact-info,
+    &-line-item-store-hours {
+      width: 33%;
+      margin-right: 1%;
+    }
+    &-line-item-store-availability {
+      width: 32%;
+      text-align: right;
+    }
+    &-line-stock-status {
+      @include font-content-m($msv-font-weight-light);
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: $msv-breakpoint-modal-m) {
+  .ms-store-select {
+    .msc-modal__content{
+      padding: $msv-store-selector-msc-modal-content-padding;
+    }
+
+    &__location {
+      &-line-select-store {
+        width: 100%;
+      }
+      &-line-item {
+        &-store-hours,
+        &-store-availability,
+        &-contact-info {
+          margin-top: $msv-store-selector-location-line-item-margin-top;
+        }
+      }
+    }
+  }
+}

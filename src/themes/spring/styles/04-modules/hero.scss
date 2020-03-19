@@ -1,0 +1,50 @@
+$homepage-hero-title-font-size: 64px;
+$homepage-hero-title-line-height: 1.2;
+
+.hero.ms-content-block {
+    .ms-content-block__details {
+        align-items: flex-start;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        left: 0;
+        padding: 48px 60px 60px 60px;
+        right: 0;        
+        top: 0; 
+        .ms-content-block__title {
+        @include fabrikam-font($msv-font-weight-normal, $homepage-hero-title-font-size, $homepage-hero-title-line-height, none, $msv-font-cinzel);
+        }
+        .msc-cta__primary {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+}
+
+@media screen and (max-width: $msv-breakpoint-m) {
+    .hero.ms-content-block {
+        .ms-content-block__details {
+            background-color: $msv-gray-900;
+            color: $msv-gray-100;
+            position: static;
+            text-decoration: none;
+            
+            .ms-content-block__title {
+                color: $msv-gray-100;
+                font-size: 28px;
+                max-width: initial;
+            }
+
+            .ms-content-block__text {
+                color: $msv-gray-100;
+            }
+            .ms-content-block__cta {
+                width: 100%;
+                .msc-cta__primary {
+                    width: 100%
+                }
+            }
+        }  
+    }
+}

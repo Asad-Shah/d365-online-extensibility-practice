@@ -67,7 +67,7 @@ export default class BackgroundImageView extends React.Component<IBackgroundImag
 
         return (
             <div style={{ backgroundColor: bgColor }} className='row align-items-center'>
-                <button type='button' onClick={onButtonClick(context)}>Get Data {image?.alignment}</button>
+                <button className='button-style-spring' type='button' onClick={onButtonClick(context)}>Get Data {image?.alignment}</button>
                 <div style={{ textAlign: image?.alignment }} className='col-sm-6'>
                     {_renderImage(image?.url, image?.altText)}
                 </div>

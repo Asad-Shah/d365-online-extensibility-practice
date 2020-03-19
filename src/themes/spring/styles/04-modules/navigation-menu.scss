@@ -1,0 +1,287 @@
+$navigation-parent-menu-margin-left:  24px;
+$navigation-parent-menu-margin-right:  24px;
+$navigation-parent-menu-margin-top:  20px;
+$navigation-menu-list-margin-top:  12px;
+$navigation-menu-list-min-width:  250px;
+$navigation-sub-menu-padding-left:  32px;
+$navigation-sub-menu-padding-right:  32px;
+$navigation-menu-item-font-size:  16px;
+$navigation-menu-active-item-font-weight: 600;
+$navigation-menu-item-height: 48px;
+$navigation-menu-item-line-height: 45px;
+$navigation-menu-button-icon-margin-left: 8px;
+$navigation-menu-icon-line-height: 40px;
+
+.ms-nav {
+    background: $msv-white;
+    width: 100%;
+    &__list {
+        z-index: 1000;
+        &__item {
+            font-size: $navigation-menu-item-font-size;
+            font-style: normal;
+            line-height: $navigation-menu-item-line-height;
+            white-space: nowrap;
+
+            &__image {
+                position: absolute;
+                right: 0;
+            }
+        }
+    }
+
+    &__list {
+        &.level-2 {
+            width: 100%;
+        }
+    }
+
+    >.ms-nav__list {
+        background: $msv-white;
+
+        >.ms-nav__list__item {
+            background: $msv-white;
+
+            >.ms-nav__list {
+                background: $msv-white;
+                margin-top: $navigation-menu-list-margin-top;
+                min-width: $navigation-menu-list-min-width;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $msv-breakpoint-xs) {
+    .ms-nav {
+        &__list {
+            display: block;
+            flex-wrap: nowrap;
+            &__mobile__container {
+                border-bottom: 1px solid $msv-gray-300;
+                padding-bottom: 13px;
+                display: flex;
+                &__button {
+                    @include vfi();
+                    @include add-icon($msv-ChevronLeft);
+                    background-color: $msv-white;
+                    border: none;
+                    color: $msv-text-color;
+                    font-family: $msv-primary-font-family;
+                    padding-left: 0;
+                    padding-right: 0;
+
+                    &:focus {
+                        outline-offset: -1px;
+                    }
+                }
+                &__span {
+                    margin-left: 21px;
+                    font-weight: 600;
+                    color: $msv-text-color;
+                    font-family: $msv-primary-font-family;
+                    font-size: $navigation-menu-item-font-size;
+                }
+            }
+
+            &__item {
+                &__image {
+                    display: none;
+                }
+                &__button {
+                    color: $msv-black;
+                    padding-left: 0;
+                    padding-right: 0;
+                    text-align: left;
+                    width: 100%;
+                    &:after {
+                        @include msv-icon();
+                        content: $msv-ChevronRight;
+                        display: inline-flex;
+                        float: right;
+                        line-height: $navigation-menu-item-line-height;
+                        text-align: right;
+                    }
+                }
+
+                &__button,
+                &__link {
+                    background-color: $msv-white;
+                    border: none;
+                    color: $msv-text-color;
+                    display: block;
+                    font-family: $msv-primary-font-family;
+                    height: $navigation-menu-item-height;
+                    line-height: $navigation-menu-item-line-height;
+                    @include vfi();
+
+                    &:focus {
+                        outline-offset: -1px;
+                    }
+                }
+            }
+        }
+        >.ms-nav__list {
+            outline: none;
+            width: 100%;
+            .ms-nav__list {
+                height: 100vh;
+            }
+            >.ms-nav__list__item {
+                >.ms-nav__list__item__button {
+                    color: $msv-black;
+                }
+            }
+        }
+    }
+
+    .ms-nav.child {
+        position: absolute;
+        top: 0;
+    }
+}
+
+@media screen and (min-width: $msv-breakpoint-m) {
+    .ms-nav {
+        display: flex;
+        &__list {
+            position: absolute;
+            &__mobile__container {
+                display: none;
+            }
+        }
+        &__list {
+            &.level-2 {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                left: 0;
+                margin-top: $navigation-menu-list-margin-top;
+
+                >.ms-nav__list__item {
+                    font-weight: 600;
+                }
+
+                .ms-nav__list {
+                    position: relative;
+
+                    .ms-nav__list__item {
+                        font-weight: normal;
+                        margin-left: 0;
+                    }
+                }
+            }
+        }
+
+        >.ms-nav__list {
+            display: flex;
+            flex-wrap: wrap;
+            outline: none;
+            position: relative;
+            width: 85%;
+            .ms-nav__list {
+                height: auto;
+            }
+            >.ms-nav__list__item:first-child {
+                margin-left: 0;
+            }
+
+            >.ms-nav__list__item {
+                margin: {
+                    top: $navigation-parent-menu-margin-top;
+                    left: $navigation-parent-menu-margin-left;
+                    right: $navigation-parent-menu-margin-right;
+                }
+
+                >.ms-nav__list__item__button,
+                >.ms-nav__list__item__link {
+                    @include vfi();
+                    @include font-content-l();
+                    align-items: flex-end;
+                    background-color: $msv-white;
+                    border: none;
+                    color: $msv-gray-1000;
+                    display: flex;
+                    font-family: $msv-primary-font-family;
+                    justify-content: center;
+                    position: relative;
+                    line-height: $navigation-menu-item-line-height;
+                  
+                    &:before {
+                        right: 0;
+                        left: 0;            
+                        content: '';
+                        outline-offset: 0;
+                        width: 0%;
+                    }                                        
+
+                    &:hover,
+                    &:focus {
+                        background: transparent;
+                        &:before {
+                            -webkit-transition: width 0.1s ease-in-out;
+                            -moz-transition: width 0.1s ease-in-out;
+                            -ms-transition: width 0.1s ease-in-out;
+                            -o-transition: width 0.1s ease-in-out;
+                            transition: width 0.1s ease-in-out;
+                            background-color: $msv-gray-1000;
+                            bottom: 12px;
+                            height: 2px;
+                            outline: none;
+                            position: absolute;
+                            top: inherit;
+                            width: calc(100% - 20px);
+                        }
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+
+                >.ms-nav__list__item__button {
+                    &:after {
+                        @include msv-icon();
+                        color: $msv-gray-800;
+                        content: $msv-ChevronDown;
+                        font-size: $navigation-menu-item-font-size;
+                        margin-left: $navigation-menu-button-icon-margin-left;
+                        line-height: $navigation-menu-icon-line-height;
+                    }
+                }
+
+                .ms-nav__list__item__link {
+                    color: $msv-text-color;
+                    padding-left: $navigation-sub-menu-padding-left;
+                    padding-right: $navigation-sub-menu-padding-right;
+                    justify-content: flex-start;
+                    width: 100%;
+                }
+
+                >.ms-nav__list__item__link {
+                    display: flex;
+                    padding-left: 0;
+                    padding-right: 0;
+                    justify-content: center;
+                    line-height: $navigation-menu-item-line-height;
+
+                    &:hover,
+                    &:focus {
+                        background: transparent;
+                        text-decoration: none;
+                        &:before {
+                            width: 100%
+                        }
+                    }
+                }
+
+                >.ms-nav__list__item__button:first-child {
+                    margin-left: 0;
+                }
+                >.ms-nav__list {
+                    border: 1px solid $msv-gray-300;
+                    box-shadow: 0px 8px 15px $msv-box-shadow-color;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,405 @@
+{
+    "exception": null,
+    "pageRoot": {
+        "id": "core-root_0",
+        "typeName": "core-root",
+        "modules": {
+            "body": [
+                {
+                    "id": "default-page_0",
+                    "typeName": "default-page",
+                    "config": {
+                        "skipToMainText": "Skip to main content",
+                        "pageTheme": "abacus"
+                    },
+                    "modules": {
+                        "primary": [
+                            {
+                                "id": "primaryArea_00",
+                                "typeName": "default-container",
+                                "friendlyName": "Default container",
+                                "modules": {
+                                    "content": [
+                                        {
+                                            "typeName": "content-block",
+                                            "id": "IDNMAwGxa_35tyevp-content-block",
+                                            "friendlyName": "content block",
+                                            "platform": {
+                                                "layout": "full-width"
+                                            },
+                                            "config": {
+                                                "heading": {
+                                                    "text": "NEW ARRIVAL",
+                                                    "tag": "h1"
+                                                },
+                                                "paragraph": "<p>Into the summer breeze with all new designer dresses</p>\n",
+                                                "image": {
+                                                    "src": "https://pk.khaadi.com/media/wysiwyg/khaadi-lawn-01-03-2020_1.jpg",
+                                                    "altText": "Deafult Image"
+                                                },
+                                                "links": [
+                                                    {
+                                                        "linkText": "Shop now",
+                                                        "linkUrl": {
+                                                            "type": "categoryLink",
+                                                            "categoryId": 68719478056
+                                                        },
+                                                        "ariaLabel": "Shop now"
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "primaryArea__0",
+                                "typeName": "product-list",
+                                "config": {
+                                    "productIds": "68719498121"
+                                },
+                                "modules": {
+                                    "slot1": [
+                                        { 
+                                            "id": "ProductFeature__0",
+                                            "typeName": "product-item-details",
+                                            "config": {
+                                                "productName": "PRET",
+                                                "productDescription": "Revel in joy with season with our exclusively pret collection",
+                                                "productImage":{
+                                                    "src": "https://pk.khaadi.com/media/promobanners//p/r/pretcategory10032020.jpg",
+                                                    "altText": ""
+                                                },
+                                                "productPrice": "100",
+                                                "buttonTxt": "SHOP NOW",
+                                                "imageAlignment": "top",
+                                                "headingColor": "blue"
+                                            }
+                                        },
+                                        {
+                                            "typeName": "product-item-details"
+                                        },
+                                        { 
+                                            "id": "ProductFeature__2",
+                                            "typeName": "product-item-details",
+                                            "config": {
+                                                "productName": "KHAAS",
+                                                "productDescription": "Make the perfect addition to your wardrobe",
+                                                "productImage":{
+                                                    "src": "https://pk.khaadi.com/media/promobanners//k/h/khaadi-khaas-29-02-2020.jpg",
+                                                    "altText": ""
+                                                },
+                                                "buttonTxt": "SHOP NOW",
+                                                "productPrice": "100",
+                                                "imageAlignment": "top"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "primaryArea_001",
+                                "typeName": "default-container",
+                                "friendlyName": "Default container",
+                                "modules": {
+                                    "content": [
+                                        {
+                                            "typeName": "kids-section",
+                                            "id": "ABCD -content-block",
+                                            "friendlyName": "kids block",
+                                            "platform": {
+                                                "layout": "full-width"
+                                            },
+                                            "config": {
+                                                "heading": "KIDS",
+                                                "sectionDesc": "Celebrate this winter season with Khaadi Kids' on-trend western and festive eastern outfits that reflects your children’s imagination and brings out their vibrant personalities..",
+                                                "btnText": "SHOP NOW",
+                                                "bgImage": {
+                                                    "src": "https://pk.khaadi.com/media/promobanners//k/h/khaad-kids-banner-29-02-2020.jpg",
+                                                    "altText": "Kids"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "id": "primaryArea_002",
+                                "typeName": "carousel",
+                                "friendlyName": "Carousel",
+                                "modules": {
+                                    "content": [
+                                        {
+                                            "typeName": "content-block",
+                                            "id": "content-block_01",
+                                            "friendlyName": "content-block",
+                                            "platform": {
+                                                "layout": "tile"
+                                            },
+                                            "config": {
+                                                "heading": {
+                                                    "text": "NEW ARRIVAL",
+                                                    "tag": "h1"
+                                                },
+                                                "paragraph": "<p>Into the summer breeze with all new designer dresses</p>\n",
+                                                "image": {
+                                                    "src": "https://pk.khaadi.com/media/catalog/product/cache/873cd9eab5d2d9ae24d7f56c8237dd5a/r/2/r20107_2.jpg",
+                                                    "altText": "Deafult Image"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "typeName": "content-block",
+                                            "id": "content-block_02",
+                                            "friendlyName": "content-block",
+                                            "platform": {
+                                                "layout": "tile"
+                                            },
+                                            "config": {
+                                                "heading": {
+                                                    "text": "NEW ARRIVAL",
+                                                    "tag": "h1"
+                                                },
+                                                "paragraph": "<p>Into the summer breeze with all new designer dresses</p>\n",
+                                                "image": {
+                                                    "src": "https://pk.khaadi.com/media/catalog/product/cache/873cd9eab5d2d9ae24d7f56c8237dd5a/r/2/r20107_2.jpg",
+                                                    "altText": "Deafult Image"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "typeName": "content-block",
+                                            "id": "content-block_03",
+                                            "friendlyName": "content-block",
+                                            "platform": {
+                                                "layout": "tile"
+                                            },
+                                            "config": {
+                                                "heading": {
+                                                    "text": "NEW ARRIVAL",
+                                                    "tag": "h1"
+                                                },
+                                                "paragraph": "<p>Into the summer breeze with all new designer dresses</p>\n",
+                                                "image": {
+                                                    "src": "https://pk.khaadi.com/media/catalog/product/cache/873cd9eab5d2d9ae24d7f56c8237dd5a/r/2/r20107_2.jpg",
+                                                    "altText": "Deafult Image"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "typeName": "content-block",
+                                            "id": "content-block_04",
+                                            "friendlyName": "content-block",
+                                            "platform": {
+                                                "layout": "tile"
+                                            },
+                                            "config": {
+                                                "heading": {
+                                                    "text": "NEW ARRIVAL",
+                                                    "tag": "h1"
+                                                },
+                                                "paragraph": "<p>Into the summer breeze with all new designer dresses</p>\n",
+                                                "image": {
+                                                    "src": "https://pk.khaadi.com/media/catalog/product/cache/873cd9eab5d2d9ae24d7f56c8237dd5a/r/2/r20107_2.jpg",
+                                                    "altText": "Deafult Image"
+                                                }
+                                            }
+                                        },
+                                        {
+                                            "typeName": "content-block",
+                                            "id": "content-block_05",
+                                            "friendlyName": "content-block",
+                                            "platform": {
+                                                "layout": "tile"
+                                            },
+                                            "config": {
+                                                "heading": {
+                                                    "text": "NEW ARRIVAL",
+                                                    "tag": "h1"
+                                                },
+                                                "paragraph": "<p>Into the summer breeze with all new designer dresses</p>\n",
+                                                "image": {
+                                                    "src": "https://pk.khaadi.com/media/catalog/product/cache/873cd9eab5d2d9ae24d7f56c8237dd5a/r/2/r20107_2.jpg",
+                                                    "altText": "Deafult Image"
+                                                }
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ],
+                        "header": [
+                            {
+                                "typeName": "default-container",
+                                "id": "IDNMAwGxa_35tyevp",
+                                "friendlyName": "Default container",
+                                "modules": {
+                                    "content": [
+                                        {
+                                            "typeName": "promo-banner",
+                                            "id": "IDNMAwGxa_35tyevp-promo-banner",
+                                            "friendlyName": "Promo banner",
+                                            "platform": {
+                                                    "layout": "mediumWidth"
+                                            },
+                                            "config": {
+                                                "msdyn365__moduleLayout": "mediumWidth",
+                                                "bannerMessages": [
+                                                    {
+                                                        "text": "Upto 20% discount!!"
+                                                    },
+                                                    {
+                                                        "text": "Shop for Thanksgiving SALE!!"
+                                                    }
+                                                ],
+                                                "autoplay": true,
+                                                "dismissEnabled": false,
+                                                "hideFlipper": true,
+                                                "className": "alignment__center"
+                                            }
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "typeName": "header",
+                                "id": "IDNMAwGxa_35tyevp-header",
+                                "friendlyName": "Header",
+                                "config": {
+                                    "logoImage": {
+                                        "$type": "image",
+                                        "_id": "SAsD4",
+                                        "src": "https://pk.khaadi.com/media/logo/stores/24/logo_1.png",
+                                        "altText": "Khaadi",
+                                        "copyright": "",
+                                        "quality": 100,
+                                        "width": 160,
+                                        "height": 48,
+                                        "binaryHash": "ngtpiZanODFp4p7v7xnm4Q==",
+                                        "title": "Carbon",
+                                        "imageSettings": {
+                                            "quality": 80
+                                        }
+                                    },
+                                    "logoLink": {
+                                        "linkText": "",
+                                        "linkUrl": {
+                                            "destinationUrl": "/",
+                                            "type": "internalLink"
+                                        },
+                                        "ariaLabel": "Homepage"
+                                    },
+                                    "myAccountLinks": [
+                                        {
+                                            "linkText": "My account",
+                                            "linkUrl": {
+                                                "destinationUrl": "/fabrikamga/myaccount",
+                                                "type": "internalLink"
+                                            },
+                                            "ariaLabel": "My account"
+                                        },
+                                        {
+                                            "linkText": "Order history",
+                                            "linkUrl": {
+                                                "destinationUrl": "/fabrikamga/orderhistory",
+                                                "type": "internalLink"
+                                            },
+                                            "ariaLabel": "Order history"
+                                        }
+                                    ]
+                                },
+                                "data": {},
+                                "modules": {
+                                    "menuBar": [
+                                        {
+                                            "typeName": "navigation-menu",
+                                            "id": "IDNMAwGxa_35tyevp-navigation-menu",
+                                            "friendlyName": "Navigation menu",
+                                            "config": {
+                                                "navigationMenuSource": "all",
+                                                "cmsNavItems": [
+                                                    {
+                                                        "linkText": "Explore Fabrikam",
+                                                        "linkUrl": {},
+                                                        "imageLink": {},
+                                                        "ariaLabel": "Explore Fabrikam",
+                                                        "subMenus": [
+                                                            {
+                                                                "linkText": "Contact Us",
+                                                                "linkUrl": {
+                                                                    "destinationUrl": "/fabrikamga/",
+                                                                    "type": "internalLink"
+                                                                },
+                                                                "ariaLabel": "Contact Us",
+                                                                "imageLink": {}
+                                                            },
+                                                            {
+                                                                "linkText": "Support",
+                                                                "linkUrl": {
+                                                                    "destinationUrl": "/fabrikamga/",
+                                                                    "type": "internalLink"
+                                                                },
+                                                                "ariaLabel": "Support",
+                                                                "imageLink": {},
+                                                                "subMenus": []
+                                                            },
+                                                            {
+                                                                "linkText": "Loyalty program",
+                                                                "linkUrl": {
+                                                                    "destinationUrl": "/fabrikamga/loyalty-join",
+                                                                    "type": "internalLink"
+                                                                },
+                                                                "ariaLabel": "Learn about Loyalty program",
+                                                                "imageLink": {}
+                                                            }
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "data": {}
+                                        }
+                                    ],
+                                    "search": [
+                                        {
+                                            "typeName": "search",
+                                            "id": "IDNMAwGxa_35tyevp-search",
+                                            "friendlyName": "Search",
+                                            "config": {
+                                                "topResultsCount": 5.0,
+                                                "imageSettings": {}
+                                            }
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "renderingContext": {
+        "gridSettings": {
+            "xs": {
+                "w":767
+            },
+            "sm": {
+                "w":991
+            },
+            "md": {
+                "w":1199
+            },
+            "lg": {
+                "w":1599
+            },
+            "xl": {
+                "w":1600
+            }
+        },        
+        "staticContext": {
+            "staticCdnUrl": "/_scnr/"
+        },
+        "locale": "en-us"
+    },
+    "statusCode": 200
+}

@@ -1,0 +1,86 @@
+$msv-order-summary-font: $msv-primary-font-family;
+$msv-order-summary-padding: 32px;
+$msv-order-summary-heading-font-size: 20px;
+$msv-order-summary-heading-font-weight: 600;
+$msv-order-summary-heading-line-height: 28px;
+$msv-order-summary-heading-padding-bottom: 7px;
+$msv-order-summary-items-border-radius: 2px;
+$msv-order-summary-label-font-size: 14px;
+$msv-order-summary-label-line-height: 20px;
+$msv-order-summary-line-padding: 5px 0;
+
+.msc-order-summary {
+  &-wrapper {
+    align-items: center;
+    background-color: $msv-white;
+    display: flex;
+    flex: 0 0 368px;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: $msv-order-summary-padding;
+    height: fit-content;
+  }
+
+  @media screen and (max-width: $msv-breakpoint-s) {
+    margin: unset;
+  }
+
+
+  &__heading {
+    @include font-content-xl($font-weight: $msv-font-weight-heavy);
+    font-style: $msv-order-summary-font;
+    padding-bottom: $msv-order-summary-heading-padding-bottom;
+    width: 100%;
+  }
+
+  &__items {
+    border-radius: $msv-order-summary-items-border-radius;
+    @include font-content-l();
+    width: 100%;
+
+    .msc-promo-code {
+      &__group {
+        display: flex;
+        padding: 10px 0;
+      }
+
+      &__input-box {
+        flex: auto;
+        margin-right: 20px;
+        padding-left: 8px;
+      }
+    }
+  }
+
+  &__line {
+
+    &-net-price,
+    &-tax-amount,
+    &-shipping,
+    &-loyalty,
+    &-gift-card,
+    &-total-discounts {
+      padding: 10px 0 10px;
+    }
+
+    &-total {
+      @include font-content-l();
+      padding: 10px 0 20px;
+      border-top: 1px solid $msv-gray-300;
+      text-transform: uppercase;
+    }
+
+  }
+
+  &__value {
+    float: right;
+    text-align: right;
+    font-weight: $msv-font-weight-bold;
+  }
+}
+
+@media screen and (min-width: $msv-breakpoint-l) {
+  .msc-order-summary-wrapper {
+    margin: 0;
+  }
+}

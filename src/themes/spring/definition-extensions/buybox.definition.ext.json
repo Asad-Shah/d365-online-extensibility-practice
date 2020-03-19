@@ -1,0 +1,30 @@
+{
+    "$type": "definitionExtension",
+    "config": {
+        "showBrandOffer": {
+            "friendlyName": "Show Brand Offer",
+            "type": "boolean",
+            "description": "Showing brand offer label",
+            "default": false
+        }
+    },
+    "slots": {
+        "backgroundImage": {
+            "friendlyName": "Background Image",
+            "description": "This the slot for the Background Image",
+            "max": 1,
+            "min": 0,
+            "allowedTypes": ["background-image"]
+        }
+    },
+    "resources": {
+        "decrementButtonAriaLabel": {
+            "value": "Decrease the quantity by 1",
+            "comment": "Aria Label / tooltop for the quantity decrease button"
+        },
+        "incrementButtonAriaLabel": {
+            "value": "Increase quantity by 1",
+            "comment": "Aria Label / tooltop for the quantity increase button"
+        }
+    }
+}

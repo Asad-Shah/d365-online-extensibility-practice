@@ -1,0 +1,70 @@
+$promo-banner-font-size: 16px;
+$promo-banner-line-height: 20px;
+$promo-banner-bottom-padding: 5px;
+$promo-banner-top-padding: 5px;
+$promo-banner-link-margin-left: 4px;
+
+.ms-promo-banner {
+    background: $msv-gray-1000;
+    border-color: $msv-gray-1000;
+    padding-bottom: $promo-banner-bottom-padding;
+    padding-top: $promo-banner-top-padding;
+    line-height: $promo-banner-line-height;
+    width: 100%;
+
+    &.alignment__center {
+      text-align: center;
+    }
+    &.alignment__left {
+        text-align: left;
+    }
+    &.alignment__right {
+        text-align: right;
+    }
+
+    .ms-promo-banner__text,
+    .ms-promo-banner__link {
+        color: $msv-white;
+        font-size: $promo-banner-font-size;
+        font-style: normal;
+        font-weight: $msv-font-weight-normal;
+    }
+
+    .ms-promo-banner__link {
+        margin-left: $promo-banner-link-margin-left;
+        text-decoration: none;
+    }
+
+    .ms-promo-banner__carousel {
+        width: 98%;
+    }
+
+    .msc-carousel__inner {
+        .msc-carousel__item {
+            &.active {
+                text-decoration: none;
+            }
+        }
+        
+        color: $msv-black;
+    }
+
+    .ms-promo-banner__close-button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        &:after {
+            @include msv-icon();
+            content: $msv-x-shape;
+        }
+        .ms-promo-banner__close-button__label {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: $msv-breakpoint-m) {
+    .ms-promo-banner .ms-promo-banner__carousel {
+        width: 95%;
+    }
+}

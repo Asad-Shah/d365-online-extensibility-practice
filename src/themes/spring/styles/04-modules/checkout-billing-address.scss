@@ -1,0 +1,50 @@
+$msv-checkout-billing-address-margin: 10px;
+
+$msv-checkout-input-margin-left: 0px;
+$msv-checkout-input-dimensions: 16px;
+
+$msv-checkout-shipping-address-label-margin-bottom: 12px;
+$msv-checkout-shipping-address-checkbox-margin-left: 8px;
+
+$msv-checkout-address-detail-margin-left: 0px;
+$msv-checkout-address-detail-padding-bottom: 20px;
+
+.ms-checkout-billing-address {
+  &__heading {
+    @include font-content-s($msv-font-weight-bold);
+    margin-bottom: $msv-checkout-billing-address-margin;
+  }
+
+  .msc-address-detail {
+    @include font-content-m($msv-font-weight-normal);
+    margin-left: $msv-checkout-address-detail-margin-left;
+  }
+
+  &__shipping-address-label {
+    display: flex;
+    margin-bottom: $msv-checkout-shipping-address-label-margin-bottom;
+  }
+
+  &__input {
+    min-width: $msv-checkout-input-dimensions;
+    min-height: $msv-checkout-input-dimensions;
+    margin-left: $msv-checkout-input-margin-left;
+  }
+
+  &__shipping-address-checkbox-text {
+    @include font-content-m();
+    margin-left: $msv-checkout-shipping-address-checkbox-margin-left;
+    align-self: center;
+  }
+}
+
+.ms-checkout-shipping-address {
+  .msc-address-select__button-add {
+    @include secondary-button();
+  }
+
+  .msc-address-detail {
+    @include font-content-m($msv-font-weight-normal);
+    padding-bottom: $msv-checkout-address-detail-padding-bottom;
+  }
+}

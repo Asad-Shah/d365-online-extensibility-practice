@@ -1,0 +1,85 @@
+$msv-write-review-msc-btn-margin: 10px 0;
+
+.ms-write-review {
+    margin-bottom: 20px;
+
+    .msc-btn {
+        @include primary-button();
+        margin: $msv-write-review-msc-btn-margin;
+
+        @media (max-width: $msv-breakpoint-m) {
+            width: 100%;
+        }
+    }
+}
+
+.ms-review-modal {
+    &-submit {
+        @include primary-button();
+        margin-right: 16px;
+
+        @media (max-width: $msv-breakpoint-m) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    &-cancel {
+        @include secondary-button();
+
+        @media (max-width: $msv-breakpoint-m) {
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+            margin-bottom: 12px;
+        }
+    }
+
+    .msc-rating {
+        display: inline-block;
+        margin-right: 8px;
+    }
+
+    &-rating-label {
+        @include font-content-m($msv-font-weight-light);
+    }
+
+    &-text,
+    &-title {
+        @include form-input-el();
+        @include vfi();
+        background-color: $msv-gray-100;
+        width: 100%;
+    }
+
+    &-text {
+        height: 162px;
+    }
+
+    &-text-label,
+    &-title-label {
+        @include font-content-l();
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    &-policy {
+        @include font-content-m($msv-font-weight-light);
+    }
+
+    &-row {
+        margin-bottom: 20px;
+    }
+
+    &-error {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+
+    .msc-link {
+        @include vfi();
+        text-decoration: underline;
+    }
+}

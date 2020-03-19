@@ -1,0 +1,135 @@
+$msv-account-loyalty-divider: 1px dashed $msv-gray-500;
+$msv-alternate-point-entry-bg: $msv-gray-100;
+$msv-account-loyalty-points-modal-padding: 20px 20px;
+
+$msv-modal-breakpoint-m: 450px;
+
+.ms-account-loyalty {
+    max-width: 640px;
+    margin-bottom: 40px;
+
+    .back-to-shopping {
+        width: auto;
+    }
+
+    &__home-link {
+        @include primary-button()
+    }
+
+    &__reward-points {
+        @include font-content-m();
+    }
+
+    &__heading {
+        @include font-content-xl();
+        margin-bottom: 28px;
+    }
+
+    &__info-label {
+        @include font-content-m($msv-font-weight-bold);
+        margin-bottom: 12px;
+    }
+
+    &__card-number {
+        @include font-content-xl();
+        margin-bottom: 8px;
+    }
+
+    &__join-date {
+        @include font-content-m($msv-font-weight-light);
+        margin-bottom: 40px;
+    }
+
+    &__points {
+        margin-bottom: 40px;
+    }
+
+    &__total-points-label {
+        @include font-content-l();
+        margin-bottom: 12px;
+    }
+
+    &__total-points {
+        @include font-content-xxl();
+        margin-bottom: 25px;
+        border-bottom: $msv-account-loyalty-divider;
+    }
+
+    &__point-breakdown {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 10px;
+    }
+
+    &__points-title {
+        font-weight: $msv-font-weight-bold;
+    }
+
+    &__available-points-label,
+    &__expiring-points-label {
+        font-weight: 300;
+        margin-bottom: 0;
+    }
+
+    &__points-trigger {
+        @include button-link();
+        @include font-content-m($msv-font-weight-bold);
+        @include vfi();
+        color: $msv-black;
+        text-decoration: underline;
+    }
+
+    &__points-modal-body-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 12px;
+        margin-bottom: 12px;
+        border-bottom: $msv-account-loyalty-divider;
+    }
+
+    &__points-modal-body-header {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 8px;
+        margin-bottom: 4px;
+    }
+
+    &__points-modal-activity {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-between;
+        padding: 8px;
+        height: 65px;
+
+        &:nth-child(odd) {
+            background: $msv-alternate-point-entry-bg;
+        }
+    }
+
+    &__points-modal-type {
+        margin-bottom: 4px;
+    }
+
+    &__points-modal-name {
+        @include font-content-l();
+    }
+
+    &__points-modal-total {
+        @include font-content-xl($msv-font-weight-bold);
+    }
+
+    &__points-modal-points {
+        @include font-content-l($msv-font-weight-bold);
+    }
+
+    &__points-modal {
+        @media screen and (max-width: $msv-modal-breakpoint-m) {
+            .msc-modal__content{
+                padding: $msv-account-loyalty-points-modal-padding;
+            }
+        }
+    }
+}

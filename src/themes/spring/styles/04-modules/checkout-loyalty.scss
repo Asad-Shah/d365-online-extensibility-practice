@@ -1,0 +1,184 @@
+$msv-checkout-loyalty-margin-bottom: 20px;
+$msv-checkout-loyalty-max-flex-basis: 100%;
+
+$msv-checkout-loyalty-drawer-margin-top: 20px;
+$msv-checkout-loyalty-drawer-margin-left: 0;
+$msv-checkout-loyalty-drawer-button-border: none;
+$msv-checkout-loyalty-drawer-button-padding: 0;
+$msv-checkout-loyalty-drawer-button-icon-margin-left: 8px;
+
+$msv-checkout-loyalty-details-p-margin-top: 8px;
+$msv-checkout-loyalty-details-icon-margin: 24px;
+$msv-checkout-loyalty-details-program-width: 320px;
+
+$msv-checkout-loyalty-amount-margin-top: 20px;
+
+$msv-checkout-loyalty-amount-label-margin-bottom: 4px;
+$msv-checkout-loyalty-amount-input-max-width: 610px;
+
+$msv-checkout-loyalty-amount-label-margin-bottom: 4px;
+$msv-checkout-loyalty-amount-input-max-width: 610px;
+
+$msv-checkout-loyalty-amount-max-flex-basis: 100%;
+$msv-checkout-loyalty-amount-button-margin: 20px;
+
+.ms-checkout-loyalty {
+    @include font-content-l();
+    display: flex;
+    flex-flow: row wrap;
+    margin-bottom: $msv-checkout-loyalty-margin-bottom;
+
+    &__heading {
+        @include font-content-l();
+        flex-basis: $msv-checkout-loyalty-max-flex-basis;
+    }
+
+    &__applied {
+        .ms-checkout-loyalty__heading
+        {
+            font-size: $msv-text-size;
+            line-height: $msv-text-line-height;
+        }
+
+        &-amount {
+            @include font-content-m();
+            width: 100%;
+        }
+        
+        &-value {
+            margin-left: $msv-checkout-loyalty-drawer-margin-left;
+            font-weight: $msv-font-weight-bold;
+        }
+    }
+
+    &__card-number {
+        @include font-content-xl();
+        display: block;
+        margin-top: 8px;
+    }
+
+    &__drawer {
+        margin-top: $msv-checkout-loyalty-drawer-margin-top;
+        flex-basis: $msv-checkout-loyalty-max-flex-basis;
+
+        .collapse {
+            display: none;
+        }
+
+        .collapse.show {
+            display: initial;
+        }
+    }
+
+    &-remove-btn {
+        @include button-link();
+        @include font-content-m($msv-font-weight-normal);
+        margin-left: $msv-checkout-loyalty-amount-button-margin;
+        text-decoration: underline;
+    }
+
+    .drawer__button {
+        background-color: transparent;
+        border: $msv-checkout-loyalty-drawer-button-border;
+        padding: $msv-checkout-loyalty-drawer-button-padding;
+        cursor: pointer;
+        color: $msv-link-color;
+        &:after {
+            @include msv-icon();
+            content: $msv-ChevronDown;
+            margin-left: $msv-checkout-loyalty-drawer-button-icon-margin-left;
+        }
+    }
+
+    .drawer__button[aria-expanded=true] {
+        &:after {
+            @include msv-icon();
+            content: $msv-ChevronUp;
+            margin-left: $msv-checkout-loyalty-drawer-button-icon-margin-left;
+        }
+    }
+
+
+    &__program {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: $msv-checkout-loyalty-details-program-width;
+
+        span {
+            margin-top: $msv-checkout-loyalty-details-p-margin-top;
+        }
+
+        &-title {
+            @include font-content-m($msv-font-weight-light);
+            @include add-icon($msv-file, before, $msv-outline-icon-weight);
+            margin-left: $msv-checkout-loyalty-details-icon-margin;
+            display: block;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                left: -#{$msv-checkout-loyalty-details-icon-margin};
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+
+        &-available,
+        &-expiring {
+            @include font-content-s();
+            flex-basis: 51%;
+            flex-grow: 1;
+            display: inline-block;
+        }
+
+        &-points {
+            @include font-content-s($msv-font-weight-bold);
+            display: inline-block;
+        }
+    }
+
+    &__covered-text {
+        @include font-content-l();
+        display: inline-block;
+        margin-right: 4px;
+    }
+
+    &__amount {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: $msv-checkout-loyalty-amount-max-flex-basis;
+        margin-top: $msv-checkout-loyalty-amount-margin-top;
+        &-label {
+            display: block;
+            width: 100%;
+            margin-bottom: $msv-checkout-loyalty-amount-label-margin-bottom;
+        }
+        &-input {
+            @include form-input-el();
+            width: 100%;
+        }
+
+        &-button {
+            @include primary-button();
+            width: 100%;
+            margin-top: $msv-checkout-loyalty-amount-button-margin;
+        }
+    }
+
+    @media screen and (min-width: $msv-breakpoint-l) {
+        &__amount {
+            &-input {
+                width: auto;
+                flex-grow: 1;   
+                max-width: $msv-checkout-loyalty-amount-input-max-width;
+            }
+
+            &-button {
+                margin-left: $msv-checkout-loyalty-amount-button-margin;
+                margin-top: 0;
+                width: auto;
+            }
+        }
+    }
+}
