@@ -27,6 +27,24 @@
             ],
             "max": 1,
             "min": 0
+        },
+        "slot3": {
+            "friendlyName": "Sample Button",
+            "description": "Background image content ",
+            "allowedCategories": [
+                "sample-button"
+            ],
+            "max": 1,
+            "min": 0
+        },
+        "slot4": {
+            "friendlyName": "Image Content",
+            "description": "Background image content ",
+            "allowedCategories": [
+                "sample-message"
+            ],
+            "max": 1,
+            "min": 0
         }
     },
     "resources": {

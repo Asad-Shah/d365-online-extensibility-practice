@@ -43,6 +43,18 @@
                                                 }
                                             }
                                         }
+                                    ],
+                                    "slot3": [
+                                        {
+                                            "id": "sample_button",
+                                            "typeName": "sample-button"
+                                        }
+                                    ],
+                                    "slot4": [
+                                        {
+                                            "id": "sample_message",
+                                            "typeName": "sample-message"
+                                        }
                                     ]
                                 }
                             }

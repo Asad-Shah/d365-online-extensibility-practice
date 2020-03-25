@@ -1,0 +1,21 @@
+{
+    "$type": "contentModule",
+    "friendlyName": "sample-message",
+    "name": "sample-message",
+    "description": "Please add meaningful description for authoring",
+    "categories": ["sample-message"],
+    "tags": ["Additional tags go here"],
+    "dataActions": {
+        "sampleState": {
+            "path": "../../actions/sample-state"
+        }
+    }, 
+    "config": {
+    },
+    "resources": {
+        "resourceKey": {
+            "comment": "resource description",
+            "value": "resource value"
+        }
+    }
+}

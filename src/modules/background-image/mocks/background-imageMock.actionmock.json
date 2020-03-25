@@ -1,0 +1,7 @@
+{
+    "CacheObjectType": "MyCacheObjectType",
+    "CacheKey": "MyCacheKey",
+    "Mock": {
+        "foo": "bar"      
+    }
+}

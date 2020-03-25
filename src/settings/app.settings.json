@@ -109,6 +109,9 @@
     "themes": {
         "fabrikam": {
             "friendlyName": "Fabrikam theme"
+        },
+        "spring": {
+            "friendlyName": "Spring theme"
         }
     }
 }

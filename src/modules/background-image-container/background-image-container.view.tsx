@@ -9,12 +9,22 @@ import { IBackgroundImageContainerViewProps } from './background-image-container
 export default (props: IBackgroundImageContainerViewProps) => {
     const { slots } = props;
     return (
-        <div className='row'>
-            <div style={{ width: '50%', float: 'left' }}>
-                {slots?.slot1[0]}
+        <div>
+            <div className='row'>
+                <div style={{ width: '50%', float: 'left' }}>
+                    {slots?.slot1[0]}
+                </div>
+                <div style={{ width: '50%', float: 'right' }}>
+                    {slots?.slot2[0]}
+                </div>
             </div>
-            <div style={{ width: '50%', float: 'right' }}>
-                {slots?.slot2[0]}
+            <div className='row'>
+                <div style={{ width: '50%', float: 'left' }}>
+                    {slots?.slot3[0]}
+                </div>
+                <div style={{ width: '50%', float: 'right' }}>
+                    {slots?.slot4[0]}
+                </div>
             </div>
         </div>
     );

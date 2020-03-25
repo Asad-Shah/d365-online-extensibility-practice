@@ -8,6 +8,8 @@ import { ICoreContext } from '@msdyn365-commerce/core-internal/dist/types';
 import { ProductDimension, ProductDimensionValue } from '@msdyn365-commerce/retail-proxy';
 import { getDimensionValuesAsync, getByIdAsync } from '@msdyn365-commerce/retail-proxy/dist/DataActions/ProductsDataActions.g';
 import { IBackgroundImageViewProps } from './background-image';
+// import Card from 'react-auto-generated-cards-haris/dist/lib/components/Card';
+// import getProductDataAction, { GetProductInput } from '../../actions/get-product';
 
 const _renderImage = (url: string | undefined, altText: string | undefined): JSX.Element => {
     return <img style={{ width: '200px' }} src={url} alt={altText} className='img-fluid p-3' />;
@@ -57,21 +59,24 @@ export default class BackgroundImageView extends React.Component<IBackgroundImag
 
     public componentDidMount(): void {
         console.log('Mounted!');
+        const { data } = this.props;
+        console.log(data);
     }
 
     public render(): JSX.Element {
-        const { data, context, config } = this.props;
+        const { context, config } = this.props;
         const { image, bgColor } = config;
 
-        console.log(data.products);
-
         return (
-            <div style={{ backgroundColor: bgColor }} className='row align-items-center'>
-                <button className='button-style-spring' type='button' onClick={onButtonClick(context)}>Get Data {image?.alignment}</button>
-                <div style={{ textAlign: image?.alignment }} className='col-sm-6'>
-                    {_renderImage(image?.url, image?.altText)}
+            <React.Fragment>
+                {/* <Card /> */}
+                <div style={{ backgroundColor: bgColor }} className='row align-items-center'>
+                    <button className='button-style-spring' type='button' onClick={onButtonClick(context)}>Get Data {image?.alignment}</button>
+                    <div style={{ textAlign: image?.alignment }} className='col-sm-6'>
+                        {_renderImage(image?.url, image?.altText)}
+                    </div>
                 </div>
-            </div>
+            </React.Fragment>
         );
     }
 }

@@ -20,5 +20,7 @@ export interface IBackgroundImageContainerProps<T> extends Msdyn365.IModule<T> {
     slots: {
         slot1: React.ReactNode[];
         slot2: React.ReactNode[];
+        slot3: React.ReactNode[];
+        slot4: React.ReactNode[];
     };
 }

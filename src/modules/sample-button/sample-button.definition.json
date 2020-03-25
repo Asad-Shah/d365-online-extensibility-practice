@@ -1,0 +1,24 @@
+{
+    "$type": "contentModule",
+    "friendlyName": "sample-button",
+    "name": "sample-button",
+    "description": "Please add meaningful description for authoring",
+    "categories": [
+        "sample-button"
+    ],
+    "tags": [
+        "Additional tags go here"
+    ],
+    "dataActions": {
+        "sampleState": {
+            "path": "../../actions/sample-state"
+        }
+    },
+    "config": {},
+    "resources": {
+        "resourceKey": {
+            "comment": "resource description",
+            "value": "resource value"
+        }
+    }
+}

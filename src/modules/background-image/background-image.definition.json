@@ -13,6 +13,14 @@
         "products": {
             "path": "@msdyn365-commerce-modules/retail-actions/dist/lib/get-simple-products",
             "runOn": "server"
+        },
+        "postWithUser": {
+            "path": "../../actions/get-post-with-user",
+            "runOn": "server"
+        },
+        "test": {
+            "path": "../../actions/get-product-reviews",
+            "runOn": "server"
         }
     },
     "config": {
@@ -24,8 +32,7 @@
         "productId": {
             "friendlyName": "Id of Product to show",
             "description": "The Id of the Product that will be rendered in this module",
-            "type": "string",
-            "default": "12345"
+            "type": "string"
         },
         "bgColor": {
             "friendlyName": "Background Color",
