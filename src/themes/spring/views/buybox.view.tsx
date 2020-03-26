@@ -26,13 +26,13 @@ import { Quantity } from '../utilities/quantity';
 
 const BuyboxView: React.FC<IBuyboxViewProps & IBuyboxExtentionProps<IBuyboxData>> = props => {
     const { ModuleProps, slots, MediaGalleryContainerProps, ProductInfoContainerProps, addToCart, addToWishlist, configure, description, findInStore, quantity, price, title, rating, callbacks, state, resources, config } = props;
-    console.log(props);
-    const {
-        id,
-        typeName,
-        context,
-        data: { productPrice: { result: productPrice } },
-    } = props;
+    // console.log(props);
+    // const {
+    //     id,
+    //     typeName,
+    //     context,
+    //     data: { productPrice: { result: productPrice } },
+    // } = props;
     return (
         <Module {...ModuleProps}>
             <Node {...MediaGalleryContainerProps}>
@@ -41,15 +41,15 @@ const BuyboxView: React.FC<IBuyboxViewProps & IBuyboxExtentionProps<IBuyboxData>
             <Node {...ProductInfoContainerProps}>
                 {slots.backgroundImage}
                 {config.showBrandOffer && <span className="clubs-test">Brand Offer &clubs;</span>}
-                {/* {price} */}
-                {productPrice && (<PriceComponent
+                {price}
+                {/* {productPrice && (<PriceComponent
                             id={id}
                             typeName={typeName}
                             context={context}
                             data={{price: productPrice}}
                             freePriceText={resources.priceFree}
                             originalPriceText={resources.originalPriceText}
-                            currentPriceText={resources.currentPriceText} />)}
+                            currentPriceText={resources.currentPriceText} />)} */}
                 {title}
                 {description}
                 {_renderTextBlock(props.slots.textBlocks)}

@@ -7,6 +7,8 @@ $search-result-container-nav-font-size: 12px;
 $search-result-container-refine-product-margin-bottom: 80px;
 
 $search-result-container-refiner-section-padding-right: 40px;
+$search-result-container-refiner-section-padding-right-new: 20px;
+$search-result-container-refiner-section-padding-left-new: 40px;
 $search-result-container-refiner-section-width: 25%;
 
 $search-result-container-refiner-button-submenu-height: 64px;
@@ -153,8 +155,9 @@ $search-result-prev-next-padding: 0 4px;
     .ms-search-result-container__refiner-section
     {
         display: block;
-        padding-right: $search-result-container-refiner-section-padding-right;
         width: $search-result-container-refiner-section-width;
+        padding-right: $search-result-container-refiner-section-padding-right-new;
+        padding-left: $search-result-container-refiner-section-padding-left-new;
 
         .collapse:not(.show) {
             display: none;

@@ -1,0 +1,91 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Product search result component renders correctly 1`] = `
+<ul
+  class="list-unstyled"
+>
+  <li
+    class="ms-product-search-result__item"
+  >
+    <a
+      aria-label="Cotton Polo $59.99 average rating"
+      class="msc-product"
+      href="/cotton-polo/22565429819.p"
+    >
+      <div
+        class="msc-product__image"
+      />
+      <div
+        class="msc-product__details"
+      >
+        <h4
+          class="msc-product__title"
+        >
+          Cotton Polo
+        </h4>
+        <span
+          class="msc-price"
+        >
+          <span
+            class="msc-price__actual"
+            itemprop="price"
+          >
+            $59.99
+          </span>
+        </span>
+        <p
+          class="msc-product__text"
+        >
+          Casual shirts are made for the “good times”.  Our custom fitting shirts are relaxed enough to be comfortable without looking baggy.
+        </p>
+        <div
+          class="msc-rating  msc-no-ratings "
+        >
+          <div
+            class="msc-rating__range sr-only"
+          >
+            average rating
+          </div>
+          <div
+            aria-hidden="true"
+            class="msc-rating__group"
+          >
+            <span
+              class="msc-rating__star"
+              data-index="1"
+              role="presentation"
+            />
+            <span
+              class="msc-rating__star"
+              data-index="2"
+              role="presentation"
+            />
+            <span
+              class="msc-rating__star"
+              data-index="3"
+              role="presentation"
+            />
+            <span
+              class="msc-rating__half-star"
+              data-index="4"
+              role="presentation"
+            />
+            <span
+              class="msc-rating__empty-star"
+              data-index="5"
+              role="presentation"
+            />
+          </div>
+          <output
+            aria-hidden="true"
+            class="msc-rating__count"
+            tabindex="-1"
+          >
+             182 
+          </output>
+        </div>
+      </div>
+    </a>
+  </li>
+</ul>
+`;
