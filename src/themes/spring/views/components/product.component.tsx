@@ -75,9 +75,10 @@ function renderDescription(description?: string): JSX.Element | null {
 }
 
 function renderRating(context: ICoreContext, typeName: string, id: string, avgRating?: number, totalRatings?: number, ariaLabel?: string): JSX.Element | null {
-    if (!avgRating) {
-        return null;
-    }
+
+    // if (!avgRating) {
+    //     return null;
+    // }
 
     const numRatings = totalRatings && totalRatings.toString() || undefined;
 
@@ -86,7 +87,7 @@ function renderRating(context: ICoreContext, typeName: string, id: string, avgRa
             context={context}
             id={id}
             typeName={typeName}
-            avgRating={avgRating}
+            avgRating={avgRating || 0}
             ratingCount={numRatings}
             readOnly={true}
             ariaLabel={ariaLabel || ''}
